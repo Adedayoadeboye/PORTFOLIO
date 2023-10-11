@@ -1,0 +1,83 @@
+{% extends "material/base.html" %}
+{% block content %}
+<style>
+  * {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: Arial;
+  font-size: 17px;
+  background-image: url('static/images/imagess.gif');
+  background-size: cover;
+  height: 100vh;
+  padding: 0;
+
+}
+  #myVideo {
+    position: absolute;
+  z-index: 0;
+  object-fit: cover;
+  width:100%;
+  height: 100vh;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+
+}
+.row {
+  position: relative;
+   display: grid;
+   place-items: center;
+   height: 70vh;
+   width: 70vw;
+   margin: 0 auto;
+   color: antiquewhite;
+  
+
+}
+@media only screen and (max-width:700px) {
+  .display1{
+    padding: 0;
+    font-size: 30px;
+    text-align: center;
+  }
+  .display2{
+    padding: 20px 0 0 0;
+    font-size: 26px;
+    text-align: center;
+  }
+
+}
+</style>
+
+<div class="container">
+    <div class="row">
+        <div class="col 12 m10 offset-ml center">
+            <h2 class="display1">Sales Prediction</h2>
+            <p class="display2">Machine Learn</p>
+            <a href="{{url_for('form')}}" class="btn btn-small purple white-text waves-effect waves-dark" style="margin-top: 80px;">Get Started</a>
+
+        </div>
+
+    </div>
+</div>
+</div>
+
+      {% endblock%}
+
+      {% block scripts %}
+      {{super()}}
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  
+          <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-rc.2/js/materialize.min.js"></script>
+      
+      <script>
+      
+        $(document).ready(function(){
+          $('select').formSelect();
+        });
+      </script>
+      
+      {% endblock %}

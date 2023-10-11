@@ -1,0 +1,237 @@
+{% extends "material/base.html" %}
+{% block content %}
+<style>
+h2{
+        color: aliceblue;
+        
+
+    }
+
+
+.range-style {
+  width: 400px;
+  height: 60px;
+  padding: 20px;
+  background: $primary;
+  border-radius: 10px;
+  box-shadow: -2px -2px 8px white, 2px 2px 8px rgba(black, 1);
+
+  @mixin track-style {
+    display: flex;
+    align-items: center;
+    height: 20px;
+    border-radius: 10px;
+    box-shadow: inset -2px -2px 8px white, inset 2px 2px 8px rgba(black, 1);
+  }
+
+  @mixin thumb-style {
+    position: relative;
+    top: -50%;
+    width: 40px;
+    height: 40px;
+    background-color: $primary;
+    background-image: linear-gradient(-45deg, rgba(white, 0.8), transparent);
+    border-radius: 50%;
+    box-shadow: -1px -1px 2px white, 1px 1px 2px rgba(black, 0.3);
+  }
+  &::-webkit-slider-runnable-track {
+    @include track-style;
+  }
+  &::-webkit-slider-thumb {
+    @include thumb-style;
+  }
+  &::-moz-range-track {
+    @include track-style;
+  }
+  &::-moz-range-thumb {
+    @include thumb-style;
+  }
+}
+ 
+ 
+ 
+</style>
+<div style="background-color: #1D1D1F;">
+<div class="container" style="background-color:  #080519; min-width: 100%;">
+    <div class="row">
+        <div class="col 12 m10 offset-ml center" style="width: 100%;">
+            <h2>Sale Prediction</h2>
+            <p>Machine learn</p>
+          
+            <div style="display: flex; flex-direction: row; justify-content: space-between;">
+            <a href="{{url_for('index')}}" class="btn btn-small purple white-text waves-effect waves-dark">Reset</a>
+            <a href="{{url_for('preview')}}" class="btn btn-small white purple-text waves-effect waves-dark">View Dataset</a>
+            </div>
+        </div>
+
+    </div>
+</div>
+<section class="section section-signup" style="background-color: #1D1D1F; width: 100%; margin: 0;" >
+    <div class="container" style="width: 100%;">
+        <div class="row" style="min-width: 100%;">
+           
+            <div class="col s12 m4" style="width: 100%; ">
+              <div class="card-panel grey lighten-4 black-text text-darken-4 z-depth-0" style="display: flex; justify-content: center;">
+                    <form action="{{ url_for('analyze')}}" method="POST" style="width: 100%;">
+
+                
+                       <div style="width: 60%; margin: auto;">
+                        <fieldset>
+                          <label for="role" style="font-size: 20px; font-weight: 400px; ">Select ML Algorithm</label>
+                          <div class="input-field" >
+                            
+                            <select id="role" name="model_choice">
+                              <br>
+                                    <option value="" disabled selected>Select Model</option>
+                                    <option value="linearRmodel">LinearRegression</option>
+                                    <option value="ForestRmodel">RandomForestRegressor</option>
+                                    <option value="regXmodel">XgbRegrssor</option>
+                              </select>
+                              
+                        </div>
+                      </fieldset>
+                      <fieldset>
+
+                      <div class="input-field">
+                        <p class="range-field">State the Item Weight</p>
+                        <br>
+                        <label class="labels" for=""></label>
+                        <input class="text-style" type="text" id="weight" name="weight" value="0.00"> 
+                      </div>
+                      
+                      <div class="input_field radio_option">
+                        <p class="range-field">What is the item Fat Content ?</p>
+                       
+                        <label style="display: block;"></label>
+                        <input type="radio" name="fat" id="fat1" value="1.0">
+                        <label for="fat1">Regular</label>
+                        <br>
+                        <input type="radio" name="fat" id="fat2" value="0.0">
+                        <label for="fat2">Low Fat</label>
+                      </div>
+                      <br>
+                      
+                      
+                      <div class="input-field">
+                        <p class="range-field">State the Item Visibility</p>
+                        <br>
+                        <label class="labels" for=""></label>
+                        <input type="text" id="visibility" name="visibility" value="0.000000"><br><br>
+                      </div>
+                      
+                      <div class="input_field select_option">
+                        <p class="range-field">State the Item Type</p>
+                        <select id ="item_type" name="item_type" >
+                          <option value="4.0">Dairy</option>
+                          <option value="14.0">Soft Drinks</option>
+                          <option value="10.0">Meat</option>
+                          <option value="6.0">Fruits and Vegetables</option>
+                          <option value="9.0">Household</option>
+                          <option value="0.0">Baking Goods</option>
+                          <option value="13.0">Snack Foods</option>
+                          <option value="5.0">Frozen Foods</option>
+                          <option value="2.0">Breakfast</option>
+                          <option value="8.0">Health and Hygiene</option>
+                          <option value="7.0">Hard Drinks</option>
+                          <option value="3.0">Canned</option>
+                          <option value="1.0">Breads</option>
+                          <option value="15.0">Starchy Foods</option>
+                          <option value="11.0">Seafood</option>
+                          <option value="12.0">Others</option>
+                        </select>
+                      </div>
+                      
+                      <div class="input-field">
+                        <p class="range-field">State the Item MRP</p>
+                        <br>
+                        <label class="labels" for=""></label>
+                        <input class="text" type="text" id="mrp" name="mrp" value="0.0000" > <br><br>
+                      </div>
+                      
+                      
+                      </fieldset>
+                      <fieldset>
+                      
+                         <div class="input-field">
+                              <p class="range-field">State the Outlet Establishment Year</p>
+                      
+                              <label class="labels" for=""></label>
+                              <input class="range-style" type="range" id="year" name="year" min="1900" max="2023.0" value="1900" step="1"> 
+                              
+                        </div>
+                        <br>
+
+                        <div class="input_field radio_option">
+                          
+                          <p> What is the 	Outlet Size ? </p>
+                          <br>
+                          <input type="radio" name="outlet_size" id="outlet_size1" value="0">
+                          <label for="outlet_size1">High</label>
+                          <input type="radio" name="outlet_size" id="outlet_size2" value="1">
+                          <label for="outlet_size2">Medium</label>
+                          <input type="radio" name="outlet_size" id="outlet_size3" value="2">
+                          <label for="outlet_size3">Small</label>
+                       </div>
+                       <br>
+                      
+                       <div class="input_field radio_option">
+                          <p> What is the Outlet Location Type ? </p>
+                          <br>
+                          <input type="radio" name="outlet_location" id="outlet_location1" value="0">
+                          <label for="outlet_location1">Tier 1</label>
+                          <input type="radio" name="outlet_location" id="outlet_location2" value="1">
+                          <label for="outlet_location2">Tier 2</label>
+                          <input type="radio" name="outlet_location" id="outlet_location3" value="2">
+                          <label for="outlet_location3">Tier 3</label>
+                       </div>
+                       <br>
+                      
+                      <div class="input_field radio_option">
+                        <p> What is the Outlet Type ? </p>
+                        <br>
+                        <input type="radio" name="outlet_type" id="outlet_type1" value="1">
+                        <label for="outlet_type1">Supermarket Type1</label>
+                        <input type="radio" name="outlet_type" id="outlet_type2" value="0">
+                        <label for="outlet_type2">Grocery Store</label>
+                        <input type="radio" name="outlet_type" id="outlet_type3" value="3">
+                        <label for="outlet_type3">Supermarket Type3</label>
+                        <input type="radio" name="outlet_type" id="outlet_type4" value="2">
+                        <label for="outlet_type4">Supermarket Type2</label>
+                        <br>
+                      </div>
+                      </fieldset>
+                      <fieldset>
+                        <input type="submit" value="Predict" class="btn btn-small black waves-effect waves-light black-text text-darken-4 btn-extend">
+                        <input type="reset" value="Clear" class="btn btn-small white waves-effect waves-light black-text text-darken-4 btn-extend">
+                      </fieldset>
+                       </div>    
+                    </form>
+              </div>
+            </div>
+
+           
+        </div>
+    </div>
+</section>
+</div>
+
+
+
+
+      {% endblock%}
+
+      {% block scripts %}
+      {{super()}}
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+          <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-rc.2/js/materialize.min.js"></script>
+
+      <script>
+
+      
+        $(document).ready(function(){
+          $('select').formSelect();
+        });
+      </script>
+      
+      {% endblock %}
