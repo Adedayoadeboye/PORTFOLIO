@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    
+        <script>
+            L_NO_TOUCH = false;
+            L_DISABLE_3D = false;
+        </script>
+    
+    <style>html, body {width: 100%;height: 100%;margin: 0;padding: 0;}</style>
+    <style>#map {position:absolute;top:0;bottom:0;right:0;left:0;}</style>
+    <script src="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.js"></script>
+    <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.0/css/all.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/python-visualization/folium/folium/templates/leaflet.awesome.rotate.min.css"/>
+    
+            <meta name="viewport" content="width=device-width,
+                initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+            <style>
+                #map_78a5140bd8058e188077cb624365bb49 {
+                    position: relative;
+                    width: 100.0%;
+                    height: 100.0%;
+                    left: 0.0%;
+                    top: 0.0%;
+                }
+                .leaflet-container { font-size: 1rem; }
+            </style>
+        
+</head>
+<body>
+    
+    
+            <div class="folium-map" id="map_78a5140bd8058e188077cb624365bb49" ></div>
+        
+</body>
+<script>
+    
+    
+            var map_78a5140bd8058e188077cb624365bb49 = L.map(
+                "map_78a5140bd8058e188077cb624365bb49",
+                {
+                    center: [6.465422, 3.406448],
+                    crs: L.CRS.EPSG3857,
+                    zoom: 10,
+                    zoomControl: true,
+                    preferCanvas: false,
+                }
+            );
+
+            
+
+        
+    
+            var tile_layer_833defe0784b3f0caea312d3f7899ba1 = L.tileLayer(
+                "https://stamen-tiles-{s}.a.ssl.fastly.net/toner/{z}/{x}/{y}.png",
+                {"attribution": "Map tiles by \u003ca target=\"_blank\" href=\"http://stamen.com\"\u003eStamen Design\u003c/a\u003e, under \u003ca target=\"_blank\" href=\"http://creativecommons.org/licenses/by/3.0\"\u003eCC BY 3.0\u003c/a\u003e. Data by \u0026copy; \u003ca target=\"_blank\" href=\"http://openstreetmap.org\"\u003eOpenStreetMap\u003c/a\u003e, under \u003ca target=\"_blank\" href=\"http://www.openstreetmap.org/copyright\"\u003eODbL\u003c/a\u003e.", "detectRetina": false, "maxNativeZoom": 18, "maxZoom": 18, "minZoom": 0, "noWrap": false, "opacity": 1, "subdomains": "abc", "tms": false}
+            ).addTo(map_78a5140bd8058e188077cb624365bb49);
+        
+    
+            var marker_23abe17b8c6eeab95c4d3060a526bea6 = L.marker(
+                [6.600624214913151, 3.343441917072887],
+                {}
+            ).addTo(map_78a5140bd8058e188077cb624365bb49);
+        
+    
+        var popup_b6a58b1bac48c1887a7fa811142cedc2 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_560ace0915c8d713fce5f827a5ff4f41 = $(`<div id="html_560ace0915c8d713fce5f827a5ff4f41" style="width: 100.0%; height: 100.0%;">Obafemi Awolowo Way, Ikeja, Lagos , NGA</div>`)[0];
+                popup_b6a58b1bac48c1887a7fa811142cedc2.setContent(html_560ace0915c8d713fce5f827a5ff4f41);
+            
+        
+
+        marker_23abe17b8c6eeab95c4d3060a526bea6.bindPopup(popup_b6a58b1bac48c1887a7fa811142cedc2)
+        ;
+
+        
+    
+    
+            var marker_0473e98c3d31b8fb4fc7a705f5a1c867 = L.marker(
+                [6.4874849999999995, 3.9404483333333333],
+                {}
+            ).addTo(map_78a5140bd8058e188077cb624365bb49);
+        
+    
+        var popup_368488dd725c94acf9a017111486f273 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_737d896ea52922b5a9b9cd6fe56c7aff = $(`<div id="html_737d896ea52922b5a9b9cd6fe56c7aff" style="width: 100.0%; height: 100.0%;">Ibeju/Lekki, Lagos, NGA</div>`)[0];
+                popup_368488dd725c94acf9a017111486f273.setContent(html_737d896ea52922b5a9b9cd6fe56c7aff);
+            
+        
+
+        marker_0473e98c3d31b8fb4fc7a705f5a1c867.bindPopup(popup_368488dd725c94acf9a017111486f273)
+        ;
+
+        
+    
+    
+            var marker_07b26f143dfabf9b5016b17b4d30dcc4 = L.marker(
+                [6.448730126581917, 3.4224527189029166],
+                {}
+            ).addTo(map_78a5140bd8058e188077cb624365bb49);
+        
+    
+        var popup_e5dec10234049f5ded0aeed7535e82c1 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_3278b97e844ff8bb8c256b1fd38f5622 = $(`<div id="html_3278b97e844ff8bb8c256b1fd38f5622" style="width: 100.0%; height: 100.0%;">Eti-Osa, Lagos, NGA</div>`)[0];
+                popup_e5dec10234049f5ded0aeed7535e82c1.setContent(html_3278b97e844ff8bb8c256b1fd38f5622);
+            
+        
+
+        marker_07b26f143dfabf9b5016b17b4d30dcc4.bindPopup(popup_e5dec10234049f5ded0aeed7535e82c1)
+        ;
+
+        
+    
+    
+            var marker_7e9d9c991c20cfa97f7539689fb8dd39 = L.marker(
+                [6.423505, 2.90117],
+                {}
+            ).addTo(map_78a5140bd8058e188077cb624365bb49);
+        
+    
+        var popup_d105f69ef42081053fbf8bea78688153 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_7fa3ba76c4686050fbe05be8fb807e9e = $(`<div id="html_7fa3ba76c4686050fbe05be8fb807e9e" style="width: 100.0%; height: 100.0%;">Badagry, Lagos, NGA</div>`)[0];
+                popup_d105f69ef42081053fbf8bea78688153.setContent(html_7fa3ba76c4686050fbe05be8fb807e9e);
+            
+        
+
+        marker_7e9d9c991c20cfa97f7539689fb8dd39.bindPopup(popup_d105f69ef42081053fbf8bea78688153)
+        ;
+
+        
+    
+    
+            var marker_90920d93e6a4fd02feeeaf6cb8d1c74d = L.marker(
+                [6.497448097303563, 3.308271859114],
+                {}
+            ).addTo(map_78a5140bd8058e188077cb624365bb49);
+        
+    
+        var popup_2e6a41340691e4a623feba7e8121e028 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_c606006fc2c05d67b2e27703c413e247 = $(`<div id="html_c606006fc2c05d67b2e27703c413e247" style="width: 100.0%; height: 100.0%;">49 Otunba Akin Joaquin St, Oshodi-Isolo, Lagos , NGA</div>`)[0];
+                popup_2e6a41340691e4a623feba7e8121e028.setContent(html_c606006fc2c05d67b2e27703c413e247);
+            
+        
+
+        marker_90920d93e6a4fd02feeeaf6cb8d1c74d.bindPopup(popup_2e6a41340691e4a623feba7e8121e028)
+        ;
+
+        
+    
+    
+            var marker_6c6ba6bd9ec5fa400e04a766fb6a6bb6 = L.marker(
+                [6.5659361733423, 3.5445686700093],
+                {}
+            ).addTo(map_78a5140bd8058e188077cb624365bb49);
+        
+    
+        var popup_c4cfea7f4ebdd5127665fca733607eaf = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_6bb67d39f638713d212e1d451c7662f3 = $(`<div id="html_6bb67d39f638713d212e1d451c7662f3" style="width: 100.0%; height: 100.0%;">Cele St, Ikorodu, Lagos , NGA</div>`)[0];
+                popup_c4cfea7f4ebdd5127665fca733607eaf.setContent(html_6bb67d39f638713d212e1d451c7662f3);
+            
+        
+
+        marker_6c6ba6bd9ec5fa400e04a766fb6a6bb6.bindPopup(popup_c4cfea7f4ebdd5127665fca733607eaf)
+        ;
+
+        
+    
+</script>
+</html>
